@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-
+# Author: Sébastien Combéfis
+# Version: November 27, 2016
+
+env = Environment()
+env.Append(CPPFLAGS=['-I.', '-O2', '-pedantic', '-pipe', '-std=c99', '-Wall', '-Werror'])
+env.Program('computer', ['src/computer.c', 'src/utils.c'])
