@@ -9,6 +9,13 @@
         <mkdir dir="obj/" />
         <cc outtype="executable" subsystem="console" outfile="computer" objdir="obj">
             <fileset dir="src" includes="*.c" />
+            <compilerarg value="-I." />
+            <compilerarg value="-O2" />
+            <compilerarg value="-pedantic" />
+            <compilerarg value="-pipe" />
+            <compilerarg value="-std=c99" />
+            <compilerarg value="-Wall" />
+            <compilerarg value="-Werror" />
         </cc>
     </target>
     <target name="clean">
