@@ -1,0 +1,18 @@
+<!--
+  Author: Sébastien Combéfis
+  Version: November 27, 2016
+-->
+
+<project name="computer">
+    <taskdef resource="cpptasks.tasks" />
+    <target name="computer">
+        <mkdir dir="obj/" />
+        <cc outtype="executable" subsystem="console" outfile="computer" objdir="obj">
+            <fileset dir="src" includes="*.c" />
+        </cc>
+    </target>
+    <target name="clean">
+        <delete dir="obj" />
+        <delete file="computer" /> 
+    </target>
+</project>
