@@ -4,16 +4,28 @@
 
 #include "utils.h"
 
-int fact (int n)
+int fact_aux(int n, int res)
 {
     if (n == 0)
-        return 1;
-    return n * fact(n-1);
+        return res;
+    return fact_aux(n-1, n*res);
+}
+
+int fact (int n)
+{
+    assert(n >= 0);
+    return fact_aux(n, 1);
+}
+
+int power2_aux(int n, int res)
+{
+    if (n == 0)
+        return res;
+    return power2_aux(n-1, 2*res);
 }
 
 int power2 (int n)
 {
-    if (n == 0)
-        return 1;
-    return 2 * power2(n-1);
+    assert(n >= 0);
+    return power2_aux(n, 1);
 }
