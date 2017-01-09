@@ -6,24 +6,14 @@
 
 int fact (int n)
 {
-    int i, result;
-    
-    result = 1;
-    for (i = 1; i <= n; i++)
-    {
-        result *= i;
-    }
-    return result;
+    if (n == 0)
+        return 1;
+    return n * fact(n-1);
 }
 
 int power2 (int n)
 {
-    int i, result;
-    
-    result = 1;
-    for (i = 0; i < n; i++)
-    {
-        result *= 2;
-    }
-    return result;
+    if (n == 0)
+        return 1;
+    return 2 * power2(n-1);
 }
